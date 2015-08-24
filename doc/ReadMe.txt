@@ -1,6 +1,6 @@
 This folder contains the external/vendor/thirdparty libraries.
 
-Nuget Install Packages:
+1. Nuget Install Packages:
 
 update-package Microsoft.AspNet.WebApi App.Web.Api
 install-package automapper App.Common
@@ -23,3 +23,5 @@ install-package ninject.web.common App.Web.Common
 Install-Package EntityFramework -Version 6.1.2 App.Data.SqlServer
 
 Install-Package EntityFramework -Version 6.1.2 App.Web.Api
+
+2. install-package Microsoft.AspNet.WebApi Emts.Web.Common
