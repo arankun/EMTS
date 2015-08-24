@@ -1,0 +1,13 @@
+App.Common 		: Contains "framework-ish" functionality not specific to the API or the database.
+App.Data		: Contains the domain model Plain Old CLR Objects (POCOs); these are used by NHibernate to pull/push data from the database. Also contains the data-access interfaces and helper classes. However, nothing in this project is specific to SQL Server.
+App.Data.SqlServer	: Contains data-access implementations, as well as your NHibernate mappings. This project is what makes the Data project SQL Server–specific at runtime. As you build up your services application, you should note that no code references any types contained in this project; instead, the code references only the Data project.
+App.Web.Api.Models	: Contains the service's REST resource types (or models). We separate these into their own class library just to make unit testing a little easier. But remember that the client/caller never gets this DLL, because resource type definitions are not shared with REST service clients.
+App.Web.Common		: Contains functionality common to web and service applications.
+App.Web.Api		: This is the REST service application itself; it is hosted by IIS at runtime (though in development we use IISExpress). This project contains all of the Web API controllers and handlers, the REST routes, connection string(s), and so on.
+AppDb			: Contains all the schema, code, and data for the SQL Server database. Once this project is compiled, use the output to publish the database to your preferred target. This works whether you want to create a new database or upgrade an existing one.
+App.Common.Tests	: Unit tests for the classes in the App.Web.Common project.
+App.Data.SqlServer	: Integration tests for the classes in the App.Data.SqlServer; these are used to test data access against the actual database.
+App.Data.Tests		: Unit tests for the classes in the App.Data project.
+App.Web.Api.IntegrationTests: Integration ("smoke") tests for the REST service.
+App.Web.Api.Tests	: Unit tests for the controllers and other classes in the App.Web.Api host project.
+App.Web.Common.Tests 	: Unit tests for the classes in the App.Web.Common project.
