@@ -1,19 +1,20 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(App.Web.Api.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(App.Web.Api.App_Start.NinjectWebCommon), "Stop")]
 
-namespace App.Web.Api.App_Start
-{
-    using System;
-    using System.Web;
+using System;
+using System.Web;
+using System.Web.Http;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using Ninject;
+using Ninject.Web.Common;
+using Emts.Web.Common;
 
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(App.Web.Api.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(App.Web.Api.NinjectWebCommon), "Stop")]
 
-    using Ninject;
-    using Ninject.Web.Common;
+namespace App.Web.Api {
 
     public static class NinjectWebCommon 
     {
-        private static readonly Bootstrapper bootstrapper = new Bootstrapper();
+        private static readonly Bootstrapper _Bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
@@ -22,7 +23,14 @@ namespace App.Web.Api.App_Start
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            bootstrapper.Initialize(CreateKernel);
+            IKernel container = null;
+            _Bootstrapper.Initialize(() => {
+                container = CreateKernel();
+                return container;
+            });
+
+            var resolver = new NinjectDependencyResolver(container);
+            GlobalConfiguration.Configuration.DependencyResolver = resolver;
         }
         
         /// <summary>
@@ -30,7 +38,7 @@ namespace App.Web.Api.App_Start
         /// </summary>
         public static void Stop()
         {
-            bootstrapper.ShutDown();
+            _Bootstrapper.ShutDown();
         }
         
         /// <summary>
@@ -61,6 +69,8 @@ namespace App.Web.Api.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            var containerConfigurator = new NinjectConfigurator();
+            containerConfigurator.Configure(kernel);
         }        
     }
 }

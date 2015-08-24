@@ -7,8 +7,8 @@
     <ProjectGuid>{D0FA0EDB-DC01-4DDF-A5FF-5CCF518C9685}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>App.Data.SqlServer</RootNamespace>
-    <AssemblyName>App.Data.SqlServer</AssemblyName>
+    <RootNamespace>Emts.Data.SqlServer</RootNamespace>
+    <AssemblyName>Emts.Data.SqlServer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Emts.Common\Emts.Common.csproj">
-      <Project>{66318921-5c33-42e5-8d8f-422cfc2122b5}</Project>
+      <Project>{2f400a41-872c-43bf-99c4-0b23025dd689}</Project>
       <Name>Emts.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Emts.Data\Emts.Data.csproj">

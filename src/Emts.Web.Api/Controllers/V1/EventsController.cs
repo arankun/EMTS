@@ -1,14 +1,9 @@
-﻿using App.Web.Api.Models;
-using App.Web.Common.Routing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using Emts.Web.Api.Models;
+using Emts.Web.Common.Routing;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace App.Web.Api.Controllers.V1
-{
+namespace Emts.Web.Api.Controllers.V1 {
     [ApiVersion1RoutePrefix("events")]
     public class EventsController : ApiController
     {

@@ -7,6 +7,11 @@
     [CreatedDate]   DATETIME2 (7)  NOT NULL,
     [CreatedUserId] bigint    NOT NULL,
     [ts]            rowversion     NOT NULL,
+    [Category] VARCHAR(15) NULL, 
+    [State] NCHAR(2) NULL DEFAULT 'GA', 
+    [ZipCode] VARCHAR(15) NULL, 
+    [Country] NCHAR(10) NULL, 
+    [Address1] NCHAR(10) NULL, 
     PRIMARY KEY CLUSTERED ([EventId] ASC),
     FOREIGN KEY ([CreatedUserId]) REFERENCES [dbo].[User] ([UserId])
 );

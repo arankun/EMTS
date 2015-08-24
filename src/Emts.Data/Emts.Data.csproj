@@ -7,8 +7,8 @@
     <ProjectGuid>{5F5B0EF0-87D0-421B-B512-34628EBDBBF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>App.Data</RootNamespace>
-    <AssemblyName>App.Data</AssemblyName>
+    <RootNamespace>Emts.Data</RootNamespace>
+    <AssemblyName>Emts.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

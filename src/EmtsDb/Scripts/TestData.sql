@@ -17,8 +17,8 @@ if not exists(select * from dbo.Event where Title = 'KV')
 begin
     select top 1 @userId = UserId from [User] order by UserId;
 
-    insert into dbo.Event(Title, Description, StartDate, CreatedDate, CreatedUserId)
-        values('KV', 'Sample Event Test',getdate(), getdate(), @userId);
+    insert into dbo.Event(Title, Description, StartDate, CreatedDate, CreatedUserId, State, ZipCode)
+        values('KV', 'Sample Event Test',getdate(), getdate(), @userId, 'GA', '30040');
 
     set @eventId = SCOPE_IDENTITY();
 

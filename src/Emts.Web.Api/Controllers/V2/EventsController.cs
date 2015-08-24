@@ -1,19 +1,14 @@
-﻿using App.Web.Api.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using Emts.Web.Api.Models;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace App.Web.Api.Controllers.V2
-{
+namespace App.Web.Api.Controllers.V2 {
     [RoutePrefix("api/{apiVersion:apiVersionConstraint(v2)}/events")]
     public class EventsController : ApiController
     {
         [Route("", Name = "AddEventRouteV2")]
         [HttpPost]
-        public Event AddTask(HttpRequestMessage requestMessage, Models.Event newTask)
+        public Event AddTask(HttpRequestMessage requestMessage, Event newTask)
         {
             return new Event
             {

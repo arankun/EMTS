@@ -7,8 +7,8 @@
     <ProjectGuid>{05CE55FB-52F6-4D57-8D3E-3F17037C2BA2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>App.Web.Common</RootNamespace>
-    <AssemblyName>App.Web.Common</AssemblyName>
+    <RootNamespace>Emts.Web.Common</RootNamespace>
+    <AssemblyName>Emts.Web.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NamespaceHttpControllerSelector.cs" />
+    <Compile Include="NinjectDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\ApiVersion1RoutePrefixAttribute.cs" />
     <Compile Include="Routing\ApiVersionConstraint.cs" />
@@ -82,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Emts.Common\Emts.Common.csproj">
-      <Project>{66318921-5c33-42e5-8d8f-422cfc2122b5}</Project>
+      <Project>{2f400a41-872c-43bf-99c4-0b23025dd689}</Project>
       <Name>Emts.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Emts.Data\Emts.Data.csproj">
