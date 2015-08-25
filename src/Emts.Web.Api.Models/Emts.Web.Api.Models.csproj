@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Event.cs" />
     <Compile Include="Link.cs" />
+    <Compile Include="NewEvent.cs" />
+    <Compile Include="NewEventV2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>

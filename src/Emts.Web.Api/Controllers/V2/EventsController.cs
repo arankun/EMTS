@@ -8,11 +8,11 @@ namespace App.Web.Api.Controllers.V2 {
     {
         [Route("", Name = "AddEventRouteV2")]
         [HttpPost]
-        public Event AddTask(HttpRequestMessage requestMessage, Event newTask)
+        public Event AddTask(HttpRequestMessage requestMessage, NewEventV2 newEvent)
         {
             return new Event
             {
-                Title = "In v2, newTask.Subject = " + newTask.Title
+                Title = "In v2, newTask.Subject = " + newEvent.Title
             };
         }
     }

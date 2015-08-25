@@ -28,3 +28,5 @@
 /src/Emts.Web.Common.Tests/obj
 /src/EmtsDb/bin
 /src/EmtsDb/obj
+/src/Emts.Common.Tests/*.dbmdl
+*.dbmdl
