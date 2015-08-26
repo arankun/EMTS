@@ -56,7 +56,7 @@ namespace App.Web.Api {
                 RegisterServices(kernel);
                 return kernel;
             }
-            catch
+            catch (Exception ex)
             {
                 kernel.Dispose();
                 throw;

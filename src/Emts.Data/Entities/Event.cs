@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Emts.Data.Entities
 {
     public class Event : IVersionedEntity {
-        private readonly IList<User> _users = new List<User>();
+        private readonly IList<User> _attendees = new List<User>();
 
         public virtual long EventId { get; set; }
         public virtual string Title { get; set; }
@@ -26,7 +26,7 @@ namespace Emts.Data.Entities
         public virtual string Country { get; set; }
         public virtual IList<User> Attendees
         {
-            get { return _users; }
+            get { return _attendees; }
         }
 
         public virtual byte[] Version { get; set; }

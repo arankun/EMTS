@@ -6,11 +6,13 @@ using System.Net.Http;
 using System.Web.Http;
 
 namespace Emts.Web.Api.Controllers.V1 {
-    [ApiVersion1RoutePrefix("tasks")]
+    [ApiVersion1RoutePrefix("events")]
     [UnitOfWorkActionFilter]
     public class EventsController : ApiController {
         private readonly IAddEventMaintenanceProcessor _addEventMaintenanceProcessor;
 
+
+        public EventsController() { }
         public EventsController(IAddEventMaintenanceProcessor addEventMaintenanceProcessor) {
             _addEventMaintenanceProcessor = addEventMaintenanceProcessor;
         }
@@ -21,6 +23,11 @@ namespace Emts.Web.Api.Controllers.V1 {
             var task = _addEventMaintenanceProcessor.AddEvent(newEvent);
 
             return task;
+        }
+
+        [HttpGet]
+        public string Get() {
+            return "test";
         }
     }
 }

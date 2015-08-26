@@ -76,7 +76,7 @@ namespace App.Web.Api {
                 .To<UserToUserEntityAutoMapperTypeConfigurator>()
                 .InSingletonScope();
             container.Bind<IAutoMapperTypeConfigurator>()
-                .To<NewTaskToTaskEntityAutoMapperTypeConfigurator>()
+                .To<NewEventToEventEntityAutoMapperTypeConfigurator>()
                 .InSingletonScope();
             container.Bind<IAutoMapperTypeConfigurator>()
                 .To<EventEntityToEventAutoMapperTypeConfigurator>()
