@@ -3,6 +3,7 @@ using Emts.Common.TypeMapping;
 using Emts.Web.Api;
 using Emts.Web.Common;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace App.Web.Api {
     public class WebApiApplication : System.Web.HttpApplication
@@ -10,7 +11,7 @@ namespace App.Web.Api {
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
-
+            AreaRegistration.RegisterAllAreas();//AT?: Added for Route Debugging?
             new AutoMapperConfigurator().Configure(
                 WebContainerManager.GetAll<IAutoMapperTypeConfigurator>());
         }

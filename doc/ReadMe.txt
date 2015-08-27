@@ -28,3 +28,11 @@ Install-Package EntityFramework -Version 6.1.2 Emts.Web.Api
 
 3. Diagnostic Tracing
 install-package Microsoft.AspNet.WebApi.Tracing Emts.Web.Api
+
+4. Install Route debugger
+Install-Package WebApiRouteDebugger Emts.Web.Api
+
+source: http://blogs.msdn.com/b/webdev/archive/2013/04/04/debugging-asp-net-web-api-with-route-debugger.aspx
+nuget: http://www.nuget.org/packages/WebApiRouteDebugger/
+
+5. Updated to package Microsoft.AspNet.Mvc to latest (5.2.3 as of 8/27/2015)

@@ -26,8 +26,8 @@ namespace Emts.Web.Api.Controllers.V1 {
         }
 
         [HttpGet]
-        public string Get() {
-            return "test";
+        public string Get(string hello) {
+            return hello;
         }
     }
 }

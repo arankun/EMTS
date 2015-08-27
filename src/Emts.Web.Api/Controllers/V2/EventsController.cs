@@ -15,5 +15,11 @@ namespace App.Web.Api.Controllers.V2 {
                 Title = "In v2, newTask.Subject = " + newEvent.Title
             };
         }
+
+        public Event Get() {
+            return new Event { Title = "TEst",
+                Description ="Yet another Get"
+            };
+        }
     }
 }
