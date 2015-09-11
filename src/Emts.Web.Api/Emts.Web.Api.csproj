@@ -215,7 +215,6 @@
     <Compile Include="AutoMappingConfiguration\TaskEntityToTaskAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserEntityToUserAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserToUserEntityAutoMapperTypeConfigurator.cs" />
-    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\V1\EventsController.cs" />
     <Compile Include="Controllers\V2\EventsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -275,7 +274,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>28716</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62522/</IISUrl>
+          <IISUrl>http://localhost:62523/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
